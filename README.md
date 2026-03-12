@@ -158,6 +158,8 @@ This project demonstrates how workforce management data can be transformed into 
 
 The solution provides a **data-driven approach to evaluating agent performance and improving operational efficiency**.
 
----
+💼 Author
 
-⭐ If you find this project useful, feel free to **star the repository**!
+Hemnath S
+
+Data Analyst | Python | SQL | Power BI
