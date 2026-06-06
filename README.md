@@ -6,160 +6,148 @@ The project evaluates key workforce metrics such as **Average Handle Time (AHT),
 
 ---
 
-# 🚀 Project Overview
+## 🚀 Project Overview
 
 Call centers generate large volumes of operational data. However, identifying high-performing agents and operational inefficiencies can be challenging without structured analysis.
 
 This project analyzes agent performance data and builds a **data-driven workforce analytics solution** that helps identify:
 
-* Top performing agents
-* Team productivity patterns
-* Shift performance differences
-* Workforce efficiency trends
+- Top performing agents
+- Team productivity patterns
+- Shift performance differences
+- Workforce efficiency trends
 
 ---
 
-# 🧰 Tools & Technologies
+## 🧰 Tools & Technologies
 
-**Python**
-* Pandas
-  
-**SQL (MySQL)**
-
-* Data transformation
-* KPI calculations
-* Views and window functions
-
-**Power BI**
-
-* Interactive dashboard
-* Data visualization
-* Operational insights
+| Tool | Purpose |
+|---|---|
+| Python (Pandas) | Data cleaning and EDA |
+| SQL (MySQL) | Data transformation, KPI calculations, Window functions |
+| Power BI | Interactive dashboard and visualization |
 
 ---
 
-# 🔄 Project Workflow
+## 🔄 Project Workflow
 
-Python → Exploratory Data Analysis
-SQL → Data Transformation & KPI Calculation
+```
+Python → Exploratory Data Analysis & Data Cleaning
+SQL    → Data Transformation & KPI Calculation
 Power BI → Interactive Dashboard Visualization
-
----
-
-# 📂 Project Structure
-
-```
-WFM-Agent-Performance-Analysis
-│
-├── data
-│   └── agent_performance.csv
-│
-├── python
-│   └── wfm_analysis.ipynb
-│
-├── sql
-│   └── wfm_analysis.sql
-│
-├── dashboard
-│   └── wfm_dashboard.pbix
-│
-└── README.md
 ```
 
 ---
 
-# 📊 Key Workforce Metrics
+## 📂 Files in This Repository
 
-The project calculates several industry-standard WFM metrics.
+| File | Description |
+|---|---|
+| `bpo_agent_dataset_final.csv` | Agent performance dataset |
+| `Agents Performance_Python.ipynb` | Python EDA notebook |
+| `Agents Performance SQL Quaries.sql` | SQL queries for KPI analysis |
+| `Agents Performance Dashboard.pbix` | Power BI dashboard |
+| `WFM-Agent-Performance-Analysis.pdf` | Project report (PDF) |
+| `WFM Agent Performance Analysis.docx` | Project report (Word) |
+
+---
+
+## 📊 Key Workforce Metrics Calculated
 
 ### Average Handle Time (AHT)
-
-Average time spent handling each call.
+Average time spent handling each call including talk time, hold time, and wrap-up.
 
 ### Effective Work Hours
-
-Total productive working time.
+Total productive working time after removing breaks and unavailability.
 
 ### Occupancy
-
-Measures the proportion of work time spent handling calls.
+Proportion of work time spent actively handling calls.
+```
+Occupancy = (Handle Time / Login Hours) × 100
+```
 
 ### Utilization
-
-Measures how efficiently login time is used.
+How efficiently login time is used across all work activities.
+```
+Utilization = (Total Work Time / Login Hours) × 100
+```
 
 ### Shrinkage
-
-Percentage of time agents are unavailable due to breaks or training.
+Percentage of time agents are unavailable due to breaks, training, or absenteeism.
+```
+Shrinkage = (Unavailable Time / Total Scheduled Time) × 100
+```
 
 ---
 
-# ⭐ Productivity Score Model
+## ⭐ Productivity Score Model
 
-To evaluate agent performance, a weighted productivity model was created:
+To evaluate agent performance objectively, a weighted productivity model was created:
 
 ```
 Productivity Score =
-(AHT Score × 0.4)
-+ (Occupancy × 0.3)
+  (AHT Score   × 0.4)
++ (Occupancy   × 0.3)
 + (Utilization × 0.3)
 ```
 
-Agents were ranked using **SQL window functions** to identify top performers within each team.
+Agents were ranked using **SQL Window Functions** to identify top performers within each team and shift.
 
 ---
 
-# 📈 Power BI Dashboard
+## 📈 Power BI Dashboard
 
-The Power BI dashboard provides interactive insights including:
+The interactive dashboard provides insights including:
 
-• Total Calls Handled
-• Average Handle Time (AHT)
-• Occupancy & Utilization
-• Shrinkage Percentage
-• Top Agents by Productivity Score
-• Team Performance Comparison
-• Shift-wise Call Analysis
+- Total Calls Handled
+- Average Handle Time (AHT)
+- Occupancy & Utilization rates
+- Shrinkage Percentage
+- Top Agents by Productivity Score
+- Team Performance Comparison
+- Shift-wise Call Analysis
 
-Interactive filters allow users to analyze performance by:
+**Interactive filters:** Team | Gender | Age Category | Shift | Month
 
-* Team
-* Gender
-* Age Category
-* Shift
-* Month
+### Dashboard Preview
 
----
+https://github.com/hemnath126-collab/WFM-Agent-Performance-Analysis/blob/main/Dashbord%20Screenshot.png
 
-# 🔍 Key Insights
 
-* Certain teams consistently handle higher call volumes.
-* The **11 AM – 8 PM shift** handles the highest number of calls.
-* Agents aged **21–27 show higher productivity levels**.
-* Utilization has a strong influence on overall productivity.
-* Shrinkage patterns vary across teams.
+
+## 🔍 Key Insights
+
+- Certain teams consistently handle higher call volumes, indicating uneven workload distribution
+- The **11 AM – 8 PM shift** handles the highest number of calls across all teams
+- Agents aged **21–27 show higher productivity scores** on average
+- **Utilization rate** has the strongest correlation with overall productivity
+- Shrinkage patterns vary significantly across teams, highlighting scheduling optimization opportunities
 
 ---
 
-# 🎯 Future Improvements
+## 🎯 Future Improvements
 
-Possible extensions for this project include:
-
-* Predicting agent productivity using **machine learning**
-* Forecasting call volumes using **time series analysis**
-* Predicting agent absenteeism patterns
-* Optimizing workforce scheduling
+- Predict agent productivity using **machine learning**
+- Forecast call volumes using **time series analysis (ARIMA/Prophet)**
+- Predict agent absenteeism patterns
+- Optimize workforce scheduling using predictive staffing models
 
 ---
 
-# 📌 Conclusion
+## 📌 Conclusion
 
-This project demonstrates how workforce management data can be transformed into actionable insights using **Python, SQL, and Power BI**.
+This project demonstrates how workforce management data can be transformed into actionable insights using **Python, SQL, and Power BI**. The Productivity Score Model provides a data-driven, fair approach to evaluating agent performance and improving operational efficiency.
 
-The solution provides a **data-driven approach to evaluating agent performance and improving operational efficiency**.
+---
 
-💼 Author
+## ⭐ Skills Demonstrated
 
-Hemnath S
+`Workforce Analytics` `KPI Design` `SQL Window Functions` `Python EDA` `Power BI` `Productivity Modeling` `Data-Driven Decision Making`
 
-Data Analyst | Python | SQL | Power BI
+---
+
+## 💼 Author
+
+**Hemnath S**  
+Data Analyst | Python | SQL | Power BI  
+📧 hemnath126@gmail.com | 🔗 [GitHub](https://github.com/hemnath126-collab)
